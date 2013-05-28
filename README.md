@@ -1,0 +1,1 @@
+Pomodoro is a technique to manage task by dividing the time in small chunks and performing each task in that chunk. This app is made using PhoneGap. For testing purpose the code can be downloaded and run in  browser.
