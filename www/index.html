@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.min.css" />
+        <title>Pomodoro</title>
+    </head>
+    <body>
+    <section id="page1" data-role="page">
+    <div data-role="content" class="content">
+	 <div class="container" id="container"> 
+	   
+		<div id="dia1" data-role="dialog"  ><!-- dialogbox starts here -->
+
+			<div data-role="header" data-theme="d">
+				<h1>New Activity</h1>
+
+			</div>
+        
+            <!-- content of the dialog box -->
+			<div id="dialogContent" style="" data-role="content"
+				data-theme="c">
+				<div class="subContainer">
+				<div class='ui-hide-label nameHolder' id="nameHolder">
+					<label for="activityName" class="ui-hidden-accessible">User
+						name:</label> <input type="text" name="activityName" id="activityName"
+						class="newActivityInput" data-mini="true" data-clear-btn="true"
+						placeholder="Username" />
+				</div><!-- nameHolder -->
+				
+				<div id="timeHolderid" class="ui-grid-a"><!-- timeHolder -->
+					<!-- holder for minutes and hours -->
+					<div class="ui-block-a" id="hourdiv">
+						<input type="text" name="hours" id="hours" class="timeHolder"
+							placeholder="Hours" data-clear-btn="true" data-mini="true" />
+					</div><!-- hourdiv -->
+					<div class="ui-block-b" id="minutediv">
+						<input type="text" name="minutes" id="minutes" class="timeHolder"
+							placeholder="Minutes" data-clear-btn="true" data-mini="true" />
+					</div><!-- minutediv -->
+				</div><!-- end for timeHolder-->
+				    <div id="createHolder" class="buttonHolder">
+				        <a href="#" id="createBut" name="createBut" data-role="button" data-mini="true">Create</a>
+<!-- 				        <input id="createBut" name="createBut" type="button" value="Create" data-mini="true" /> -->
+				    </div>
+                </div>
+                
+			</div><!-- dialogContent -->
+			
+			
+			
+			
+		</div><!-- dialog1 -->
+		
+		 <div data-role="dialog" id="dialog1"><!-- dialogbox starts here -->
+            
+            <div data-role="header" data-theme="d">
+                <h1>Reading Book</h1>
+
+            </div>
+
+            <!-- content of the dialog box -->
+            <div id="dialogContent"  data-role="content" data-theme="c">
+            <div class="subContainer">
+                <div id="activityTime">
+                    <p>
+                        <strong>01hr:25min</strong>
+                    </p>
+                    <p>Activity: 01hr:25min</p>
+                    <p>Break: 10 min</p>
+                </div>
+                <div id="startHolder" class="buttonHolder">
+                    <a href="#" id="startBut" name="startBut" type="button" 
+                        data-mini="true" >Start</a>
+                </div>
+                </div><!-- subcontainer -->                
+            </div><!-- dialogContent -->
+        </div><!--end of dialog1 -->
+        
+        
+        
+        <div data-role="dialog" id="dialog2">
+        <!-- dialogbox starts here -->
+
+        <div data-role="header" data-theme="d">
+            <h1>Reading Book</h1>
+        </div>
+
+        <!-- content of the dialog box -->
+        <div  data-role="content" data-theme="c">
+            <div id="pomodoroHolder" class="subContainer"></div><!-- subcontainer for displaying the pomodoro image -->
+
+            <!-- pop-up -->
+            <div data-role="popup" id="popupDialog" data-overlay-theme="a"
+                data-theme="c" style="max-width: 400px;" class="ui-corner-all" >
+                <div data-role="header" data-theme="d" class="ui-corner-top">
+                    <h1>Delete Page?</h1>
+                </div>
+                <div data-role="content" data-theme="d"
+                    class="ui-corner-bottom ui-content">
+                    <h3 class="ui-title">Do you wish to stop the pomodoro?</h3>
+                    <p>Once stopped you will have to redo this pomodoro</p>
+                    <a class="exitBut" href="#" data-role="button" data-inline="true" data-rel="back" data-mini="true">Yes</a>
+                    <a href="#" data-role="button" data-inline="true" data-rel="back" data-mini="true">No</a>
+                    <a class="exitBut" href="#" data-role="button" data-inline="true" data-mini="true">Exit</a>
+                </div>
+            </div><!-- popupDialog -->
+
+
+        </div><!-- dialogContent -->
+    </div><!-- dialog2 -->
+        
+        
+	</div><!-- container -->
+	</div> <!-- Page content -->
+	</section><!-- end of page1 -->
+	
+
+	
+	
+	<script type="text/javascript" src="cordova-2.3.0.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+           
+            app.initialize();
+        </script>
+    </body>
+</html>
